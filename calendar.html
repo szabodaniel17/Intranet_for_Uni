@@ -359,7 +359,10 @@
             },
             select: function (start, end, jsEvent, view) {
                     var evTitle = prompt('Enter Title');
-                    var evStart = prompt("Start hour:")
+                    var evStart = null;
+                    if(evTitle != null){
+                        evStart = prompt("Start hour:")
+                    }
                     var allDay = !start.hasTime && !end.hasTime;
                     var newEvent = new Object();
                     newEvent.title = evTitle;

@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>INSPINIA | Calendar</title>
+    <title>Calendar</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -199,9 +199,6 @@
             <li>
                 <a href="index.html">Home</a>
             </li>
-            <li>
-                Extra pages
-            </li>
             <li class="active">
                 <strong>Calendar</strong>
             </li>
@@ -246,15 +243,7 @@
                     </div>
                 </div>
             </div>
-            <div class="ibox float-e-margins">
-                <div class="ibox-content">
-                    <h2>FullCalendar</h2> is a jQuery plugin that provides a full-sized, drag & drop calendar like the one below. It uses AJAX to fetch events on-the-fly for each month and is
-                    easily configured to use your own feed format (an extension is provided for Google Calendar).
-                    <p>
-                        <a href="http://arshaw.com/fullcalendar/" target="_blank">FullCalendar documentation</a>
-                    </p>
-                </div>
-            </div>
+            
         </div>
         <div class="col-lg-9">
             <div class="ibox float-e-margins">
@@ -315,8 +304,9 @@
 <script src="js/plugins/iCheck/icheck.min.js"></script>
 
 <!-- Full Calendar -->
-<script src="js/plugins/fullcalendar/fullcalendar.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/gcal.min.js"></script>
 <script>
 
     $(document).ready(function() {
@@ -347,22 +337,19 @@
 
         });
 
-
-        /* initialize the calendar
-         -----------------------------------------------------------------*/
-        var date = new Date();
-        var d = date.getDate();
-        var m = date.getMonth();
-        var y = date.getFullYear();
-
         $('#calendar').fullCalendar({
+            googleCalendarApiKey: 'AIzaSyBBtF2MTIADpAjH6rGZGfBstBEBdATXwYQ',
+            events: {
+            googleCalendarId: 'daniel.szabo.schuller@gmail.com'
+            },
             header: {
                 left: 'prev,next today',
                 center: 'title',
                 right: 'month,agendaWeek,agendaDay'
             },
             editable: true,
-            droppable: true, // this allows things to be dropped onto the calendar
+            droppable: true,
+            selectable:true,
             drop: function() {
                 // is the "remove after drop" checkbox checked?
                 if ($('#drop-remove').is(':checked')) {
@@ -370,54 +357,22 @@
                     $(this).remove();
                 }
             },
-            events: [
-                {
-                    title: 'All Day Event',
-                    start: new Date(y, m, 1)
-                },
-                {
-                    title: 'Long Event',
-                    start: new Date(y, m, d-5),
-                    end: new Date(y, m, d-2)
-                },
-                {
-                    id: 999,
-                    title: 'Repeating Event',
-                    start: new Date(y, m, d-3, 16, 0),
-                    allDay: false
-                },
-                {
-                    id: 999,
-                    title: 'Repeating Event',
-                    start: new Date(y, m, d+4, 16, 0),
-                    allDay: false
-                },
-                {
-                    title: 'Meeting',
-                    start: new Date(y, m, d, 10, 30),
-                    allDay: false
-                },
-                {
-                    title: 'Lunch',
-                    start: new Date(y, m, d, 12, 0),
-                    end: new Date(y, m, d, 14, 0),
-                    allDay: false
-                },
-                {
-                    title: 'Birthday Party',
-                    start: new Date(y, m, d+1, 19, 0),
-                    end: new Date(y, m, d+1, 22, 30),
-                    allDay: false
-                },
-                {
-                    title: 'Click for Google',
-                    start: new Date(y, m, 28),
-                    end: new Date(y, m, 29),
-                    url: 'http://google.com/'
-                }
-            ]
-        });
+            select: function (start, end, jsEvent, view) {
+                    var evTitle = prompt('Enter Title');
+                    var evStart = prompt("Start hour:")
+                    var allDay = !start.hasTime && !end.hasTime;
+                    var newEvent = new Object();
+                    newEvent.title = evTitle;
+                    newEvent.start = moment(evStart,"hh:mm").format();
+                    newEvent.allDay = false;
+                    $('#calendar').fullCalendar('renderEvent', newEvent);
 
+            },
+            eventClick: function (calEvent, jsEvent, view) {           
+                 $('#calendar').fullCalendar('removeEvents', calEvent._id);
+            },
+           
+        });
 
     });
 

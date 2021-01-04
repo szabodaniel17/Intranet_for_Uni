@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Dashboard</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Toastr style -->
+    <link href="css/plugins/toastr/toastr.min.css" rel="stylesheet">
+
+    <!-- Gritter -->
+    <link href="js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element"> <span>
+                            <img alt="image" class="img-circle" src="img/a4.jpg" />
+                             </span>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">Daniel Szabo</strong>
+                             </span> <span class="text-muted text-xs block">Secretary <b class="caret"></b></span> </span> </a>
+                          
+                        </div>
+                        <div class="logo-element">
+                            IN+
+                        </div>
+                    </li>
+                    <li class="active">
+                        <a href="index_prof.html"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard</span></a>
+                    </li>
+                    <li>
+                        <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">Mailbox </span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="mailbox.html">Inbox</a></li>
+                            <li><a href="mail_detail.html">Email view</a></li>
+                            <li><a href="mail_compose.html">Compose email</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="adeverinta.html"><i class="fa fa-th-large"></i> <span class="nav-label">Adeverinta</span></a>
+                    </li>
+                <li>
+                     <a href="calendar.html"><i class="fa fa-table"></i> <span class="nav-label">Calendar</span></a>
+                </li>
+            </ul>
+
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+        <div class="row border-bottom">
+        <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+            <form role="search" class="navbar-form-custom" action="search_results.html">
+                <div class="form-group">
+                    <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
+                </div>
+            </form>
+        </div>
+            <ul class="nav navbar-top-links navbar-right">
+                <li>
+                    <span class="m-r-sm text-muted welcome-message">Welcome to our Intranet</span>
+                </li>
+                   
+                <li>
+                    <a href="login.html">
+                        <i class="fa fa-sign-out"></i> Log out
+                    </a>
+                </li>
+               
+            </ul>
+
+        </nav>
+        </div>
+                <div class="row  border-bottom white-bg dashboard-header text-center">
+
+                    <div class="col-md-4 ">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                           <h2>Welcome Daniel</h2>
+                        </div>
+                        <div>
+                            <div class="border-left-right">
+                                <img alt="image" class="img-responsive" src="img/a4.jpg" style="margin: auto;">
+                            </div>
+                            <div class="ibox-content profile-content">
+                                <h4><strong>Daniel Szabo</strong></h4>
+                                <p><i class="fa fa-map-marker"></i> Riviera State 32/106</p>
+                                <h5>
+                                    About me
+                                </h5>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.
+                                </p>
+                                
+                                <div class="user-button" >
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-6 col-md-offset-3 text-center">
+                                            <button type="button" class="btn btn-primary btn-sm btn-block"><i class="fa fa-envelope"></i> Send Message</button>
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                    </div>
+
+                    <div class="col-sm-3 col-md-offset-2 text-left">
+                        
+                        <small>You have 5 notifications.</small>
+                        <ul class="list-group clear-list m-t">
+                            <li class="list-group-item fist-item">
+                                <span class="pull-right">
+                                    09:00 pm
+                                </span>
+                                <span class="label label-success">1</span> Contact the dean
+                            </li>
+                            <li class="list-group-item">
+                                <span class="pull-right">
+                                    10:16 am
+                                </span>
+                                <span class="label label-info">2</span> Write some certificates
+                            </li>
+                            <li class="list-group-item">
+                                <span class="pull-right">
+                                    04:22 pm
+                                </span>
+                                <span class="label label-primary">3</span> You have 4 students with appointment
+                            </li>
+                            <li class="list-group-item">
+                                <span class="pull-right">
+                                    05:06 pm
+                                </span>
+                                <span class="label label-default">4</span> Call back the proffessor
+                            </li>
+                            <li class="list-group-item">
+                                <span class="pull-right">
+                                    06:00 am
+                                </span>
+                                <span class="label label-primary">5</span> Write a mail to Sandra
+                            </li>
+                        </ul>
+                    </div>
+                    
+                  
+
+            </div>
+        
+        </div>
+</body>
+</html>

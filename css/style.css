@@ -1552,7 +1552,7 @@ a.list-group-item.active:focus {
 .flot-chart.dashboard-chart {
   display: block;
   height: 180px;
-  margin-top: 40px;
+  margin-top: 10px;
 }
 .flot-chart-content {
   width: 100%;
@@ -1996,6 +1996,12 @@ div.dt-button-info {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+h4 {
+  margin-top: 9px;
+}
+label[id = "label"]{
+  margin-top: 6px;
 }
 .onoffswitch-inner:before {
   content: "ON";

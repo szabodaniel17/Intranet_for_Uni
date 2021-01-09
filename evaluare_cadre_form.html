@@ -13,6 +13,8 @@
 
     <!-- FooTable -->
     <link href="css/plugins/footable/footable.core.css" rel="stylesheet">
+    <link href="css/plugins/ionRangeSlider/ion.rangeSlider.css" rel="stylesheet">
+    <link href="css/plugins/ionRangeSlider/ion.rangeSlider.skinFlat.css" rel="stylesheet">
 
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -70,7 +72,7 @@
             </form>
         </div>
             <ul class="nav navbar-top-links navbar-right">
-            
+        
                 <li>
                     <a href="login.html">
                         <i class="fa fa-sign-out"></i> Log out
@@ -99,7 +101,7 @@
                 <div class="col-lg-12">
                     <div class="ibox float-e-margins">
                         <div class="ibox-title">
-                            <h5>Cadre didactice</h5>
+                            <h5>Evaluare cadru</h5>
                         </div>
                         <div class="ibox-content">
 
@@ -107,37 +109,31 @@
                                 <thead>
                                 <tr>
 
-                                    <th data-toggle="true">Materie</th>
-                                    <th>Profesor</th>
-                                    <th data-hide="all">Curs/Laborator</th>
-                                    <th>Action</th>
+                                    <th>Intrebare</th>
+                                    <th>Raspuns</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr>
-                                    <td>Marketing</td>
-                                    <td>A. Constantinescu</td>
-                                    <td>Curs</td>
-                                    <td><a href="evaluare_cadre_form.html"><i class="fa fa-check text-navy"></i></a></td>
+                                    <td></br>Sunteti multumit de modul de expunere a informatiei?</td>
+                                    <td id = "ionrange_1"></td>
+                                   
                                 
                                 </tr>
                                 <tr>
-                                    <td>Sisteme distribuite (SD)</td>
-                                    <td>T. Cioara</td>
-                                    <td>Curs si laborator</td>
-                                    <td><a href="evaluare_cadre_form.html"><i class="fa fa-check text-navy"></i></a></td>
+                                    <td></br>Sunteti multumit de atitudinea profesorului?</td>
+                                    <td id = "ionrange_2"></td>
+                                   
                                 </tr>
                                 <tr>
-                                    <td>Proiectarea sistemelor de operare (PSO)</td>
-                                    <td>Ciprian Oprisa</td>
-                                    <td>Curs si laborator</td>
-                                    <td><a href="evaluare_cadre_form.html"><i class="fa fa-check text-navy"></i></a></td>
+                                    <td></br>Gradul de prezenta la activitatea cadrului didactic.</td>
+                                    <td id = "ionrange_3"></td>
+                                   
                                 </tr>
                                 <tr>
-                                    <td>Proiectare baze date (PBD)</td>
-                                    <td>A. Mitrea</td>
-                                    <td>Laborator</td>
-                                    <td><a href="evaluare_cadre_form.html"><i class="fa fa-check text-navy"></i></a></td>
+                                    <td></br>Nota generala pentru activitatea cadrului.</td>
+                                    <td id = "ionrange_4"></td>
+                                   
                                 </tr>                                
                                 </tbody>
                                 <tfoot>
@@ -153,13 +149,17 @@
                     </div>
                 </div>
             </div>
-        <div class="footer">
-            <div>
-                <strong>Copyright</strong> Example Company &copy; 2014-2017
+            <div class="summernote">
+<textarea id="review" name="review" rows="5" cols="170">
+           
+            </textarea>
+            </div>
+            <div class="mail-body text-right tooltip-demo">
+                <a href="evaluare_cadre.html" class="btn btn-sm btn-primary" data-toggle="tooltip" data-placement="top" title="Send"><i class="fa fa-reply"></i> Send</a>
+                <a href="evaluare_cadre.html" class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Discard email"><i class="fa fa-times"></i> Discard</a>
             </div>
         </div>
-
-        </div>
+        
         </div>
 
 
@@ -176,13 +176,35 @@
     <!-- Custom and plugin javascript -->
     <script src="js/inspinia.js"></script>
     <script src="js/plugins/pace/pace.min.js"></script>
+    <script src="js/plugins/ionRangeSlider/ion.rangeSlider.min.js"></script>
 
     <!-- Page-Level Scripts -->
     <script>
         $(document).ready(function() {
 
             $('.footable').footable();
-            $('.footable2').footable();
+        
+            $("#ionrange_1").ionRangeSlider({
+            min: 0,
+            max: 10,
+            grid:true,
+        });
+        $("#ionrange_2").ionRangeSlider({
+            min: 0,
+            max: 10,
+            grid:true,
+        });
+        $("#ionrange_3").ionRangeSlider({
+            min: 0,
+            max: 10,
+            grid:true,
+        });
+
+        $("#ionrange_4").ionRangeSlider({
+            min: 0,
+            max: 10,
+            grid:true,
+        });
 
         });
 

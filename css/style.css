@@ -8369,3 +8369,7 @@ body.md-skin {
     margin: 0;
   }
 }
+
+textarea{
+  resize:none
+}

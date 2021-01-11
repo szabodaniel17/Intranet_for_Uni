@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title> Dashboard</title>
+    <title> Dashboard </title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -48,16 +48,19 @@
                         <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">Mailbox </span></a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="mailbox.html">Inbox</a></li>
-                            <li><a href="mail_detail.html">Email view</a></li>
                             <li><a href="mail_compose.html">Compose email</a></li>
                         </ul>
                     </li>
+                    <li>
+                        <a href="courses.html"><i class="fa fa-book"></i><span class="nav-label">My courses</span></a>
+                        </li>
+                    <li>
+                        <a href="calendar.html"><i class="fa fa-table"></i> <span class="nav-label">Calendar</span></a>
+                   </li>
                    <li>
                     <a href="students_graphs.html"><i class="fa fa-pie-chart"></i> <span class="nav-label">Student Metrics</span>  </a>
                 </li>
-                <li>
-                     <a href="calendar.html"><i class="fa fa-table"></i> <span class="nav-label">Calendar</span></a>
-                </li>
+                
             </ul>
 
             </div>
@@ -131,19 +134,19 @@
                                 <span class="pull-right">
                                     09:00 pm
                                 </span>
-                                <span class="label label-success">1</span> Please contact me
+                                <span class="label label-success">1</span> School closed
                             </li>
                             <li class="list-group-item">
                                 <span class="pull-right">
                                     10:16 am
                                 </span>
-                                <span class="label label-info">2</span> Sign a contract
+                                <span class="label label-info">2</span> Please contact me
                             </li>
                             <li class="list-group-item">
                                 <span class="pull-right">
                                     08:22 pm
                                 </span>
-                                <span class="label label-primary">3</span> Open new shop
+                                <span class="label label-primary">3</span> New course available
                             </li>
                             <li class="list-group-item">
                                 <span class="pull-right">
@@ -155,13 +158,10 @@
                                 <span class="pull-right">
                                     12:00 am
                                 </span>
-                                <span class="label label-primary">5</span> Write a letter to Sandra
+                                <span class="label label-primary">5</span> Write a mail to Sandra
                             </li>
                         </ul>
                     </div>
-                    
-                  
-
             </div>
         
         </div>
@@ -207,95 +207,5 @@
     <!-- Toastr -->
     <script src="js/plugins/toastr/toastr.min.js"></script>
 
-
-    <script>
-        $(document).ready(function() {
-            
-            var data1 = [
-                [0,4],[1,8],[2,5],[3,10],[4,4],[5,16],[6,5],[7,11],[8,6],[9,11],[10,30],[11,10],[12,13],[13,4],[14,3],[15,3],[16,6]
-            ];
-            var data2 = [
-                [0,1],[1,0],[2,2],[3,0],[4,1],[5,3],[6,1],[7,5],[8,2],[9,3],[10,2],[11,1],[12,0],[13,2],[14,8],[15,0],[16,0]
-            ];
-            $("#flot-dashboard-chart").length && $.plot($("#flot-dashboard-chart"), [
-                data1, data2
-            ],
-                    {
-                        series: {
-                            lines: {
-                                show: false,
-                                fill: true
-                            },
-                            splines: {
-                                show: true,
-                                tension: 0.4,
-                                lineWidth: 1,
-                                fill: 0.4
-                            },
-                            points: {
-                                radius: 0,
-                                show: true
-                            },
-                            shadowSize: 2
-                        },
-                        grid: {
-                            hoverable: true,
-                            clickable: true,
-                            tickColor: "#d5d5d5",
-                            borderWidth: 1,
-                            color: '#d5d5d5'
-                        },
-                        colors: ["#1ab394", "#1C84C6"],
-                        xaxis:{
-                        },
-                        yaxis: {
-                            ticks: 4
-                        },
-                        tooltip: false
-                    }
-            );
-
-            var doughnutData = {
-                labels: ["App","Software","Laptop" ],
-                datasets: [{
-                    data: [300,50,100],
-                    backgroundColor: ["#a3e1d4","#dedede","#9CC3DA"]
-                }]
-            } ;
-
-
-            var doughnutOptions = {
-                responsive: false,
-                legend: {
-                    display: false
-                }
-            };
-
-
-            var ctx4 = document.getElementById("doughnutChart").getContext("2d");
-            new Chart(ctx4, {type: 'doughnut', data: doughnutData, options:doughnutOptions});
-
-            var doughnutData = {
-                labels: ["App","Software","Laptop" ],
-                datasets: [{
-                    data: [70,27,85],
-                    backgroundColor: ["#a3e1d4","#dedede","#9CC3DA"]
-                }]
-            } ;
-
-
-            var doughnutOptions = {
-                responsive: false,
-                legend: {
-                    display: false
-                }
-            };
-
-
-            var ctx4 = document.getElementById("doughnutChart2").getContext("2d");
-            new Chart(ctx4, {type: 'doughnut', data: doughnutData, options:doughnutOptions});
-
-        });
-    </script>
 </body>
 </html>

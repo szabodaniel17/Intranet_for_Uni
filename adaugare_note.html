@@ -13,6 +13,9 @@
 
     <!-- FooTable -->
     <link href="css/plugins/footable/footable.core.css" rel="stylesheet">
+    <script src="js/plugins/sweetalert/sweetalert.min.js"></script>
+
+    <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
 
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -156,26 +159,26 @@
                                 <tr>
                                     <td>John Smith</td>
                                     <td><textarea id="grade" name="grade" rows="1" cols="1"></textarea></td>
-                                    <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
+                                    <td><a href="#"><i id="save" class="fa fa-check text-navy"></i></a></td>
                                     <td><a href="#"><i id="submit" class="fa fa-check text-navy"></i></a></td>
                                 
                                 </tr>
                                 <tr>
                                     <td>Judy Johnson</td>
                                     <td><textarea id="grade1" name="grade" rows="1" cols="1"></textarea></td>
-                                    <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
+                                    <td><a href="#"><i id="save1" class="fa fa-check text-navy"></i></a></td>
                                     <td><a href="#"><i id = "submit1" class="fa fa-check text-navy"></i></a></td>
                                 </tr>
                                 <tr>
                                     <td>Michael Lee</td>
                                     <td><textarea id="grade2" name="grade" rows="1" cols="1"></textarea></td>
-                                    <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
+                                    <td><a href="#"><i id="save2" class="fa fa-check text-navy"></i></a></td>
                                     <td><a href="#"><i id="submit2" class="fa fa-check text-navy"></i></a></td>
                                 </tr>
                                 <tr>
                                     <td>Jane Doe</td>
                                     <td><textarea id="grade3" name="grade" rows="1" cols="1"></textarea></td>
-                                    <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
+                                    <td><a href="#"><i id="save3" class="fa fa-check text-navy"></i></a></td>
                                     <td><a href="#"><i id ="submit3" class="fa fa-check text-navy"></i></a></td>
                                 </tr>
 
@@ -224,24 +227,104 @@
 
             $('.footable').footable();
             $('#submit').click(function(){
-                document.getElementById("grade").disabled = true;
+                if(!document.getElementById("grade").value=="")
+                    document.getElementById("grade").disabled = true;
+                else
+                swal({
+                        title: "No value in the field",
+                        type: "error",
+                        showCancelButton: false,
+                        confirmButtonText: "Type in value",
+                        closeOnConfirm: false
+                    });
                
             })
 
             $('#submit1').click(function(){
-                document.getElementById("grade1").disabled = true;
+                if(!document.getElementById("grade1").value=="")
+                    document.getElementById("grade1").disabled = true;
+                else
+                swal({
+                        title: "No value in the field",
+                        type: "error",
+                        showCancelButton: false,
+                        confirmButtonText: "Type in value",
+                        closeOnConfirm: false
+                    });
                
             })
 
             $('#submit2').click(function(){
-                document.getElementById("grade2").disabled = true;
+                if(!document.getElementById("grade2").value=="")
+                    document.getElementById("grade2").disabled = true;
+                else
+                swal({
+                        title: "No value in the field",
+                        type: "error",
+                        showCancelButton: false,
+                        confirmButtonText: "Type in value",
+                        closeOnConfirm: false
+                    });
                
             })
 
             $('#submit3').click(function(){
-                document.getElementById("grade3").disabled = true;
+                if(!document.getElementById("grade3").value=="")
+                    document.getElementById("grade3").disabled = true;
+                else
+                swal({
+                        title: "No value in the field",
+                        type: "error",
+                        showCancelButton: false,
+                        confirmButtonText: "Type in value",
+                        closeOnConfirm: false
+                    });
                
             })
+
+            $('#save').click(function(){
+                if(!document.getElementById("grade").disabled)
+                    swal({
+                        title: "Grade has been saved",
+                        type: "success",
+                        showCancelButton: false,
+                        confirmButtonText: "OK",
+                        closeOnConfirm: false
+                    });
+            });
+
+            $('#save1').click(function(){
+                if(!document.getElementById("grade1").disabled)
+                    swal({
+                        title: "Grade has been saved",
+                        type: "success",
+                        showCancelButton: false,
+                        confirmButtonText: "OK",
+                        closeOnConfirm: false
+                    });
+            });
+
+            $('#save2').click(function(){
+                if(!document.getElementById("grade2").disabled)
+                    swal({
+                        title: "Grade has been saved",
+                        type: "success",
+                        showCancelButton: false,
+                        confirmButtonText: "OK",
+                        closeOnConfirm: false
+                    });
+            });
+
+            $('#save3').click(function(){
+                if(!document.getElementById("grade").disabled)
+                    swal({
+                        title: "Grade has been saved",
+                        type: "success",
+                        showCancelButton: false,
+                        confirmButtonText: "OK",
+                        closeOnConfirm: false
+                    });
+            });
 
         });
 

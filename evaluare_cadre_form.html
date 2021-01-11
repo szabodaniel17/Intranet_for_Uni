@@ -30,32 +30,44 @@
                 <ul class="nav metismenu" id="side-menu">
                     <li class="nav-header">
                         <div class="dropdown profile-element"> <span>
-                            <img alt="image" class="img-circle" src="img/a4.jpg" />
+                            <img alt="image" class="img-circle" src="img/profile_small.jpg" />
                              </span>
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">Daniel Szabo</strong>
-                             </span> <span class="text-muted text-xs block">Secretary <b class="caret"></b></span> </span> </a>
-                          
+                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">Claudiu Toader</strong>
+                             </span> <span class="text-muted text-xs block">Student <b class="caret"></b></span> </span> </a>
+                        
                         </div>
                         <div class="logo-element">
                             IN+
                         </div>
                     </li>
                     <li class="active">
-                        <a href="index_prof.html"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard</span></a>
+                        <a href="index_student.html"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard</span></a>
                     </li>
                     <li>
-                        <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">Mailbox </span></a>
+                        <a href="mailbox_stud.html"><i class="fa fa-envelope"></i> <span class="nav-label">Mailbox </span><span class="label label-warning pull-right">16/24</span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="mailbox.html">Inbox</a></li>
-                            <li><a href="mail_detail.html">Email view</a></li>
-                            <li><a href="mail_compose.html">Compose email</a></li>
+                            <li><a href="mailbox_stud.html">Inbox</a></li>
+                  
+                            <li><a href="mail_compose_stud.html">Compose email</a></li>
                         </ul>
                     </li>
-                <li>
-                     <a href="calendar.html"><i class="fa fa-table"></i> <span class="nav-label">Calendar</span></a>
+                    <li>
+                        <a href="courses_stud.html"><i class="fa fa-book"></i><span class="nav-label">My courses</span></a>
+                        </li>
+                    <li>
+                        <a href="calendar_stud.html"><i class="fa fa-table"></i> <span class="nav-label">Calendar</span></a>
+                   </li>
+                   <li>
+                    <a href="orar.html"><i class="fa fa-list-alt"></i><span class="nav-label">Timetable</span></a>
                 </li>
-            </ul>
+                <li>
+                    <a href="contract_studiu.html"><i class="fa fa-file"></i><span class="nav-label">Study contract</span></a>
+                </li>
+                   <li>
+                    <a href="contacts_stud.html"><i class="fa fa-users"></i> <span class="nav-label">Contacts</span></a>
+                   </li>
+                   
 
             </div>
         </nav>
@@ -84,13 +96,13 @@
         </div>
             <div class="row wrapper border-bottom white-bg page-heading">
                 <div class="col-lg-10">
-                    <h2>Orar</h2>
+                    <h2>Evaluate teachers</h2>
                     <ol class="breadcrumb">
                         <li>
-                            <a href="index.html">Home</a>
+                            <a href="index_student.html">Home</a>
                         </li>
                         <li class="active">
-                            <strong>Evaluarea cadrelor didactice</strong>
+                            <strong>Evaluate teachers</strong>
                         </li>
                     </ol>
                 </div> 
@@ -101,7 +113,7 @@
                 <div class="col-lg-12">
                     <div class="ibox float-e-margins">
                         <div class="ibox-title">
-                            <h5>Evaluare cadru</h5>
+                            <h5>Evaluate teacher</h5>
                         </div>
                         <div class="ibox-content">
 
@@ -109,29 +121,29 @@
                                 <thead>
                                 <tr>
 
-                                    <th>Intrebare</th>
-                                    <th>Raspuns</th>
+                                    <th>Question</th>
+                                    <th>Answer</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr>
-                                    <td></br>Sunteti multumit de modul de expunere a informatiei?</td>
+                                    <td></br>Are you satisfied with the way the information is displayed?</td>
                                     <td id = "ionrange_1"></td>
                                    
                                 
                                 </tr>
                                 <tr>
-                                    <td></br>Sunteti multumit de atitudinea profesorului?</td>
+                                    <td></br>Are you satisfied of teacher's attitude?</td>
                                     <td id = "ionrange_2"></td>
                                    
                                 </tr>
                                 <tr>
-                                    <td></br>Gradul de prezenta la activitatea cadrului didactic.</td>
+                                    <td></br>The degree of presence at the teacher's activity.</td>
                                     <td id = "ionrange_3"></td>
                                    
                                 </tr>
                                 <tr>
-                                    <td></br>Nota generala pentru activitatea cadrului.</td>
+                                    <td></br>General note for the teacher's activity.</td>
                                     <td id = "ionrange_4"></td>
                                    
                                 </tr>                                
@@ -150,7 +162,7 @@
                 </div>
             </div>
             <div class="summernote">
-<textarea id="review" name="review" rows="5" cols="170">
+<textarea id="review" name="review" rows="5" cols="140">
            
             </textarea>
             </div>

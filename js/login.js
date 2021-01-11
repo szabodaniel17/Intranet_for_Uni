@@ -1,7 +1,6 @@
 $(document).ready(function (){
-
-
     $('#submit').on("click", verifyCredentials);
+    $('#reset_password').on("click", sendEmail);
 })
 
 function verifyCredentials(){
@@ -31,5 +30,20 @@ function verifyCredentials(){
     return false;
 }
    
+function sendEmail(){
+    
+    swal({
+        title: "Email sent!",
+        type: "success",
+        showCancelButton: false,
+        confirmButtonColor: "#DD6B55",
+        confirmButtonText: "OK",
+        closeOnConfirm: false
+    }, function(){
+        location.href = 'login.html';
+    });
+
+    return false;
+}
 
 

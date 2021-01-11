@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>INTRANET+ </title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element"> <span>
+                            <img alt="image" class="img-circle" src="img/pers1.jpg" />
+                             </span>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">Ioana Cheres</strong>
+                             </span> <span class="text-muted text-xs block">Professor <b class="caret"></b></span> </span> </a>
+                          
+                        </div>
+                        <div class="logo-element">
+                            IN+
+                        </div>
+                    </li>
+                    <li class="active">
+                        <a href="index_prof.html"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard</span></a>
+                    </li>
+                    <li>
+                        <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">Mailbox </span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="mailbox.html">Inbox</a></li>
+                            <li><a href="mail_compose.html">Compose email</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="courses.html"><i class="fa fa-book"></i><span class="nav-label">My courses</span></a>
+                        </li>
+                    <li>
+                        <a href="calendar.html"><i class="fa fa-table"></i> <span class="nav-label">Calendar</span></a>
+                   </li>
+                   <li>
+                    <a href="students_graphs.html"><i class="fa fa-pie-chart"></i> <span class="nav-label">Student Metrics</span>  </a>
+                </li>
+                
+            </ul>
+
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+        <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+            <form role="search" class="navbar-form-custom" action="search_results.html">
+                <div class="form-group">
+                    <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
+                </div>
+            </form>
+        </div>
+            <ul class="nav navbar-top-links navbar-right">
+                <li>
+                    <button id = "search" class="btn btn-lg btn-primary" type="submit">
+                        Search
+                    </li>
+                <li>
+                    <span class="m-r-sm text-muted welcome-message">Welcome to INTRANET+ </span>
+                </li>
+                <li>
+                    <a href="login.html">
+                        <i class="fa fa-sign-out"></i> Log out
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+        </div>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-9">
+                    <h2>	Search Page</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="index_prof.html">Home</a>
+                        </li>
+
+                        <li class="active">
+                            <strong>Search Page</strong>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        <div class="wrapper wrapper-content animated fadeInRight">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-content">
+                            <h2>
+                                3 results found for: <span id="span" class="text-navy">“Claudiu Toader”</span>
+                            </h2>
+                            <small>Request time  (0.23 seconds)</small>
+
+                            <div class="search-form">
+                                <form action="index.html" method="get">
+                                    <div class="input-group">
+                                        <input type="text" placeholder="Claudiu Toader" name="search" class="form-control input-lg">
+                                        <div class="input-group-btn">
+                                            <button class="btn btn-lg btn-primary" type="submit">
+                                                Search
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            <div class="search-result">
+                                <h3><a href="#">Claudiu Toader</a></h3>
+                                <a href="#" class="search-link">30234</a>
+                                <p>
+                                    Computer Science
+                                </p>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            <div class="search-result">
+                                <h3><a href="#">Mihai Toader</a></h3>
+                                <a href="#" class="search-link">10235‎</a>
+                                <p>
+                                    Architecture and Urbanism
+                                </p>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            <div class="search-result">
+                                <h3><a href="#">Claudiu Andrei</a></h3>
+                                <a href="#" class="search-link">‎30234</a>
+                                <p>
+                                    Mechanics
+                                </p>
+                            </div>
+
+                            <div class="hr-line-dashed"></div>
+                            <div class="text-center">
+                                <div class="btn-group">
+                                    <button class="btn btn-white" type="button"><i class="fa fa-chevron-left"></i></button>
+                                    <button class="btn btn-white active">1</button>
+                                    
+                                    <button class="btn btn-white" type="button"><i class="fa fa-chevron-right"></i> </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </div>
+        <div class="footer">
+            <div class="pull-right">
+                10GB of <strong>250GB</strong> Free.
+            </div>
+            <div>
+                <strong>UTCN</strong> INTRANET+ &copy; 2020
+            </div>
+        </div>
+
+        </div>
+        </div>
+
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+
+</body>
+
+</html>

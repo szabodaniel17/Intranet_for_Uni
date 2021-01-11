@@ -1,5 +1,6 @@
 $(document).ready(function (){
 
+
     $('#submit').on("click", verifyCredentials);
 })
 
@@ -17,7 +18,18 @@ function verifyCredentials(){
     }else if(username.val() == 'szabodaniel@worker.utcluj.ro' && password.val() == 'pass1234'){
         //dashboard personal administrativ
         window.location.href = "index_administrativ.html";
+    }else {
+        swal({
+            title: "Incorrect username or password",
+            type: "warning",
+            showCancelButton: false,
+            confirmButtonText: "Try again!",
+            closeOnConfirm: false
+            });
     }
     
     return false;
 }
+   
+
+

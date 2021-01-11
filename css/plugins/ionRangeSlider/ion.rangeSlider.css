@@ -60,7 +60,7 @@
             .irs-slider.to:before {
                 position: absolute; display: block; content: "";
                 top: -30%; left: 0;
-                width: 130%; height: 160%;
+                width: 100%; height: 100%;
                 background: rgba(0,0,0,0.0);
             }
         .irs-slider.last {

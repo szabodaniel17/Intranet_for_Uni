@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Evaluare cadre</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- FooTable -->
+    <link href="css/plugins/footable/footable.core.css" rel="stylesheet">
+    <link href="css/plugins/ionRangeSlider/ion.rangeSlider.css" rel="stylesheet">
+    <link href="css/plugins/ionRangeSlider/ion.rangeSlider.skinFlat.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element"> <span>
+                            <img alt="image" class="img-circle" src="img/a4.jpg" />
+                             </span>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">Daniel Szabo</strong>
+                             </span> <span class="text-muted text-xs block">Secretary <b class="caret"></b></span> </span> </a>
+                          
+                        </div>
+                        <div class="logo-element">
+                            IN+
+                        </div>
+                    </li>
+                    <li class="active">
+                        <a href="index_prof.html"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard</span></a>
+                    </li>
+                    <li>
+                        <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">Mailbox </span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="mailbox.html">Inbox</a></li>
+                            <li><a href="mail_detail.html">Email view</a></li>
+                            <li><a href="mail_compose.html">Compose email</a></li>
+                        </ul>
+                    </li>
+                <li>
+                     <a href="calendar.html"><i class="fa fa-table"></i> <span class="nav-label">Calendar</span></a>
+                </li>
+            </ul>
+
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+        <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+            <form role="search" class="navbar-form-custom" action="search_results.html">
+                <div class="form-group">
+                    <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
+                </div>
+            </form>
+        </div>
+            <ul class="nav navbar-top-links navbar-right">
+        
+                <li>
+                    <a href="login.html">
+                        <i class="fa fa-sign-out"></i> Log out
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+        </div>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2>Orar</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li class="active">
+                            <strong>Evaluarea cadrelor didactice</strong>
+                        </li>
+                    </ol>
+                </div> 
+            </div>
+        <div class="wrapper wrapper-content animated fadeInRight">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>Evaluare cadru</h5>
+                        </div>
+                        <div class="ibox-content">
+
+                            <table class="footable table table-stripped toggle-arrow-tiny" data-page-size="10">
+                                <thead>
+                                <tr>
+
+                                    <th>Intrebare</th>
+                                    <th>Raspuns</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td></br>Sunteti multumit de modul de expunere a informatiei?</td>
+                                    <td id = "ionrange_1"></td>
+                                   
+                                
+                                </tr>
+                                <tr>
+                                    <td></br>Sunteti multumit de atitudinea profesorului?</td>
+                                    <td id = "ionrange_2"></td>
+                                   
+                                </tr>
+                                <tr>
+                                    <td></br>Gradul de prezenta la activitatea cadrului didactic.</td>
+                                    <td id = "ionrange_3"></td>
+                                   
+                                </tr>
+                                <tr>
+                                    <td></br>Nota generala pentru activitatea cadrului.</td>
+                                    <td id = "ionrange_4"></td>
+                                   
+                                </tr>                                
+                                </tbody>
+                                <tfoot>
+                                <tr>
+                                    <td colspan="5">
+                                        <ul class="pagination pull-right"></ul>
+                                    </td>
+                                </tr>
+                                </tfoot>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="summernote">
+<textarea id="review" name="review" rows="5" cols="170">
+           
+            </textarea>
+            </div>
+            <div class="mail-body text-right tooltip-demo">
+                <a href="evaluare_cadre.html" class="btn btn-sm btn-primary" data-toggle="tooltip" data-placement="top" title="Send"><i class="fa fa-reply"></i> Send</a>
+                <a href="evaluare_cadre.html" class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Discard email"><i class="fa fa-times"></i> Discard</a>
+            </div>
+        </div>
+        
+        </div>
+
+
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- FooTable -->
+    <script src="js/plugins/footable/footable.all.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+    <script src="js/plugins/ionRangeSlider/ion.rangeSlider.min.js"></script>
+
+    <!-- Page-Level Scripts -->
+    <script>
+        $(document).ready(function() {
+
+            $('.footable').footable();
+        
+            $("#ionrange_1").ionRangeSlider({
+            min: 0,
+            max: 10,
+            grid:true,
+        });
+        $("#ionrange_2").ionRangeSlider({
+            min: 0,
+            max: 10,
+            grid:true,
+        });
+        $("#ionrange_3").ionRangeSlider({
+            min: 0,
+            max: 10,
+            grid:true,
+        });
+
+        $("#ionrange_4").ionRangeSlider({
+            min: 0,
+            max: 10,
+            grid:true,
+        });
+
+        });
+
+    </script>
+
+</body>
+
+</html>

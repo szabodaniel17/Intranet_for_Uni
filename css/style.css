@@ -8393,3 +8393,22 @@ body.md-skin {
 textarea{
   resize:none
 }
+
+#sYear,#eYear{
+  width:30px;
+  height: 25px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#studyYear{
+  width: 100px;
+}
+
+#studentName{
+  resize:horizontal;
+  min-width: 100px;
+}

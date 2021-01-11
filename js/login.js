@@ -1,5 +1,6 @@
 $(document).ready(function (){
 
+
     $('#submit').on("click", verifyCredentials);
 })
 
@@ -21,3 +22,6 @@ function verifyCredentials(){
     
     return false;
 }
+   
+
+

@@ -203,7 +203,19 @@
     <script src="js/plugins/pace/pace.min.js"></script>
     <script>
         $(document).ready(function() {
+            
             $("button").click(function(){
+                var empty = 0
+                $('input[type=text]').each(function(){
+                    console.log(this)
+                    console.log(this.value)
+                   if (this.value == "") {
+                       empty++;
+                      
+                       console.log("intra")
+                   } 
+                })
+                if (empty == 1)
                 swal({
                 title: "Certificate issued successfully!",
                 type: "success",
@@ -211,6 +223,15 @@
                 confirmButtonText: "OK",
                 closeOnConfirm: false
              });
+                else {console.log(empty)
+                      swal({
+                title: "Please complete the missing data ",
+                type: "error",
+                showCancelButton: false,
+                confirmButtonText: "OK",
+                closeOnConfirm: false
+             });
+                }
             });
         });
     </script>
